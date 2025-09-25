@@ -34,10 +34,11 @@ in buf, and this is subsequently sent further.
 ### ICMP protocol
 
 It is implemented using two functions, namely icmp_error_handler and icmp_echo_reply.
-icmp_error_handler receives the error type (icmp_type) and creates a new
-packet to signal this error, and icmp_echo_reply also creates a new packet, but its
-content is copied from the initial received packet and only certain fields are changed
-(the source and destination addresses and the type in the ICMP header).
+- icmp_error_handler receives the error type (icmp_type) and creates a new
+packet to signal this error
+- icmp_echo_reply also creates a new packet, but its content is copied from the initial
+- received packet and only certain fields are changed (the source and destination
+addresses and the type in the ICMP header).
 
 ### ARP Protocol
 
